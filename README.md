@@ -1,5 +1,5 @@
 # Web Application with Django for Object Identification deployed in AWS Lightsail:
- ## To try web application you can go to http://34.220.204.100:8000/ 
+ ## To try this web application click [here](http://34.220.204.100:8000/) 
  
  In this repo, I use Django to create web application and tensorflow as backend to do object identification.
  
