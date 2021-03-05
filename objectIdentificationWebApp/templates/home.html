@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Classification</title>
+</head>
+<body>
+
+<h1 style="font-size:20px">Please upload an image, we will tell you what its label is!</h1>
+
+<form action="imageprocess/", method="post", enctype="multipart/form-data">
+    {% csrf_token %}
+<!--    {{ image_form.as_p }}-->
+  <input type="file" id="image" name="image">
+  <input type="submit", value = "Submit">
+</form>
+<br>
+<br>
+<h1 style="font-size:20px">How we do this:</h1></br>
+<li> We use ResNet50 pre_trained on ImageNet dataset to classify the given image.</li></br>
+<li>To find similar images, we extracted features of all images in COCO-val2014 dataset using pre-trained ResNet50 and we saved them as unlabeled training data.
+    When we are given an image, we extract its feature, and then we find its K-nearest neighbors among unlabeled training data based on Euclidean distance.</li>
+</body>
+</html>

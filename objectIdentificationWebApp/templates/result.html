@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+.content {
+  max-width: 2000px;
+  margin: auto;
+}
+.column {
+  float: left;
+  width: 19%;
+  padding: 5px;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+ {% load static %}
+ <center>
+<table>
+  <tr>
+    <td><img src="{% static 'img.jpg' %}" alt="Uploaded Image"></td>
+    <td>
+
+            <p style="font-size:30px"><b> The label of your image is  <span style="color:red;">{{label}}</span> with probability {{prob}}% </br>
+                </b></p>
+
+
+    {% for p,r in res %}
+        With probability <b>{{p}}%</b> the label of your image is <b>{{r}}</b> </br>
+{% endfor %}</td>
+  </tr>
+
+</table>
+</center>
+ <br>
+ <br>
+ <br>
+ <p style="font-size:30px"><b> Here are 10 images in COCO-VAL2014 dataset similar to your image:</b></p>
+  <br>
+
+<div class="content">
+
+
+<!--{% for img in img_names %}-->
+<!-- {img} <br/>-->
+<!--    <img src="/static/{{img}}" style="width:100%" alt="image">-->
+<!--{% endfor %}-->
+ <div class="row">
+  {% for img in img_names1 %}
+      <div class = "column">
+          <img src="/static/{{img}}" width="400" height="300" alt="image">
+      </div>
+  {% endfor%}
+  </div>
+ <div class="row">
+  {% for img in img_names2 %}
+      <div class = "column">
+          <img src="/static/{{img}}" width="400" height="300" alt="image">
+      </div>
+  {% endfor%}
+  </div>
+</div>
+<!--{% load static %}-->
+<!--<img src="{% static img_names.0 %}" alt="Uploaded Image" width="200" height="200">-->
+</body>
+</html>
