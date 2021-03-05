@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import ImageUploadForm
-from .apps import ObjectidentificationConfig
+
+from .models import image_classification, nearest_neighbors
 # Create your views here.
 img_path = "static/img.jpg"
 def handle_uploaded_file(f):
@@ -18,7 +19,7 @@ def image_process(request):
 
 
         handle_uploaded_file(request.FILES['image'])
-        res = ObjectidentificationConfig.image_classification(img_path)
-        img_names = ObjectidentificationConfig.nearest_neighbors(img_path,10)
+        res = image_classification(img_path)
+        img_names = nearest_neighbors(img_path,10)
         print(res[0])
     return render(request, "result.html",{'label':res[0][1],'prob':res[0][0],'res':res[1:],'img_names1':img_names[0:5],'img_names2':img_names[5:]})
