@@ -1,1 +1,2 @@
-https://github.com/mshadloo/Web-Application-with-Django-for-Object-Identification.git
+chmod +x coco.sh && ./coco.sh
+python manage.py runserver
