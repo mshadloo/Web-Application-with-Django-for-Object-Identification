@@ -7,4 +7,5 @@
  You also need to download [COCO dataset(2014 Val Images)](https://cocodataset.org/#download). To do so you can run the file [coco.sh](https://github.com/mshadloo/Web-Application-with-Django-for-Object-Identification/blob/main/coco.sh). 
 <br>
 After running [coco.sh](https://github.com/mshadloo/Web-Application-with-Django-for-Object-Identification/blob/main/coco.sh), move the folder "coco" to static folder of the project.
-
+<br>
+Run 
