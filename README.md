@@ -16,3 +16,7 @@ Now you can run web application using following command:
 '''console
 python manage.py runserver
 '''
+```console
+foo@bar:~$ whoami
+foo
+```
