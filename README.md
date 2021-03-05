@@ -13,10 +13,7 @@ After running [coco.sh](https://github.com/mshadloo/Web-Application-with-Django-
 <br>
 Run [coco_featureExtraction.py](https://github.com/mshadloo/Web-Application-with-Django-for-Object-Identification/blob/main/objectIdentificationWebApp/coco_featureExtraction.py) to extract features of COCO-Val2014 images using ResNet50 pretrained on ImageNet datset.
 Now you can run web application using following command:
-'''console
-python manage.py runserver
-'''
+
 ```console
-foo@bar:~$ whoami
-foo
+python manage.py runserver
 ```
