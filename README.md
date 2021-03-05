@@ -3,3 +3,5 @@
  
  ### Project Requirements:
  The file [requirements.txt](https://github.com/mshadloo/Web-Application-with-Django-for-Object-Identification/blob/main/requirements.txt) contains all required packages to run the project.
+ <br>
+ You also need to download []
