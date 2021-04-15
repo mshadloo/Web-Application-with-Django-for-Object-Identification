@@ -1,7 +1,7 @@
 # Web Application with Django for Object Identification deployed in AWS Lightsail:
  ## To try this web application click [here](http://34.220.204.100:8000/) 
  
-In this repo, I use Django to create a web application and TensorFlow as the backend to do object identification. I utilize Keras's ResNet50(pre-trained on ImageNet) to classify the given image. I also find ten most similar images among [COCO-val2014 images](https://cocodataset.org/#download) to the given image. To achieve this, I load pretrained ResNet50 without fully connected layers and use it as a feature extractor. I extract features from COCO-val2014 images using the feature extractor and store these features in numpy arrays. For the given image, I also extract its features using pretrained ResNet50, and then by running the K-nearest neighbor algorithm in Euclidean space, I find the most similar images to the given image.
+In this repo, I use Django to create a web application and I use TensorFlow as the backend to do object identification. I utilize Keras's ResNet50(pre-trained on ImageNet) to classify the given image. I also find ten most similar images among [COCO-val2014 images](https://cocodataset.org/#download) to the given image. To achieve this, I load pretrained ResNet50 without fully connected layers and use it as a feature extractor. I extract features from COCO-val2014 images using the feature extractor and store these features in numpy arrays. For the given image, I also extract its features using pretrained ResNet50, and then by running the K-nearest neighbor algorithm in Euclidean space, I find the most similar images to the given image.
  
  
  ### Project Requirements:
